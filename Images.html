@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="resim.jpg" alt="Manzara Resmi" width="500" height="300" align="center">
+    <img src="resim.jpg" alt="Manzara Resmi">
+    <img src="resim.jpg" alt="Manzara Resmi" width="500" height="300">
+    <img src="resim.jpg" alt="Manzara Resmi" width="500" height="300" align="center">
+    <video src="videos/machines.webm" poster="images/machine.jpg" controls>
+        <p>Watch <a href="https://youtube.com/link">video on Youtube</a>
+      </video>
+      <video controls poster="images/machine.jpg">
+        <source src="videos/machines.webm" type="video/webm">
+        <source src="videos/machines.mp4" type="video/mp4">
+        <source src="videos/machines.ogv" type="video/ogg">
+        <track label="English" kind="subtitles" srclang="en" src="vtt/subtitles-en.vtt" default />
+        <track label="Francais" kind="subtitles" srclang="fr" src="vtt/subtitles-fr.vtt" />
+        <p>Watch <a href="https://youtube.com/link">video on Youtube</a>
+      </video>
+      <video autoplay loop muted poster="images/machine.jpg" role="none">
+        <source src="videos/machines.webm" type="video/webm">
+        <source src="videos/machines.mp4" type="video/mp4">
+        <source src="videos/machines.ogv" type="video/ogg">
+      </video>
+      <button id="playPause" aria-controls="idOfAudio"
+  data-pause-text="Pause audio"
+  data-play-text="Play audio">Pause audio</button>
+  const pauseButton = document.getElementById('playPause');
+
+pauseButton.addEventListener("click", pauseAndPlay, false);
+
+function pauseAndPlay() {
+  console.log(this);
+  const media = document.getElementById(this.getAttribute('aria-controls'));
+
+  if (media.paused) {
+    media.play();
+    this.innerText = this.dataset.pauseText;
+  } else {
+    media.pause();
+    this.innerText = this.dataset.playText;
+  }
+}
+</body>
+</html>
