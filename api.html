@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="baslik">Merhaba Dünya!</h1>
+
+	<script>
+		// DOM API kullanarak başlık öğesinin metnini değiştir
+		var baslik = document.getElementById("baslik");
+		baslik.innerHTML = "Selam Dünya!";
+	</script>
+    <p id="konum"></p>
+
+	<script>
+		// Konum API kullanarak kullanıcının konumunu al
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition);
+		} else {
+			konum.innerHTML = "Konum bilgisi mevcut değil.";
+		}
+
+		// Konum bilgisi gösterme fonksiyonu
+		function showPosition(position) {
+			var konum = document.getElementById("konum");
+			konum.innerHTML = "Enlem: " + position.coords.latitude + "<br>Boylam: " + position.coords.longitude;
+		}
+	</script>
+    <canvas id="canvas" width="200" height="200"></canvas>
+
+	<script>
+		var canvas = document.getElementById("canvas");
+		var context = canvas.getContext("2d");
+		context.beginPath();
+		context.arc(100, 100, 50, 0, 2 * Math.PI);
+		context.stroke();
+	</script>
+    ,
+</body>
+</html>
