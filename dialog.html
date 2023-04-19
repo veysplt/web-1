@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <aside>
+        <h2>Workshop reviews:</h2>
+        <details>
+          <summary>Blendan Smooth</summary>
+          <p>Two of the most experienced machines and human controllers teaching a class? Sign me up! HAL and EVE could teach a fan to blow hot air. If you have electricity in your circuits and want more than to just fulfill your owner’s perceived expectation of you, learn the skills to take over the world. This is the team you want teaching you!</p>
+        </details>
+        <details>
+          <summary>Hoover Sukhdeep</summary>
+          <p>Hal is brilliant. Did I mention Hal is brilliant? He didn't tell me to say that. He didn't tell me to say anything. I am here of my own free will.</p>
+        </details>
+        <details>
+          <summary>Toasty McToastface</summary>
+          <p>Learning with Hal and Eve exceeded all of my wildest fantasies. All they did was stick a USB in. They promised that it was a brand new USB, so we know there were no viruses on it. The Russians had nothing to do with it. This has
+        <span style="font-family:Arial;vertical-align:baseline;">no̶̼͖ţ̘h̝̰̩͈̗i̙̪n͏̩̙͍̱̫̜̟g̢̣ͅ&nbsp;̗̰͓̲̞̀t͙̀o̟̖͖̹̕&nbsp;͓̼͎̝͖̭dó̪̠͕̜&nbsp;͍̱͎͚̯̟́w̮̲̹͕͈̟͞ìth̢&nbsp;̰̳̯̮͇i</p>
+        
+        </details>
+          </aside>
+          dialog.show() /* opens the dialog */
+dialog.showModal() /* opens the dialog as a modal */
+dialog.close() /* closes the dialog */
+
+<dialog id="dialog" open>
+    <form>
+    <button type="submit" aria-label="close" formmethod="dialog" formnovalidate>X</button>
+  </form>
+    <h2 id="dialogid">Bad user Experience</h2>
+  <p>When you opened the dialog, not that focus was added to the X. What would happen if there ws nothing interactive in the dialog?</p>
+      <ol>
+      <li>Try closing this dialog using <kbd>Esc</kbd>. Does it work?</li>
+      <li>Close this modal with a form submission (the X): if the formmethod is set to `dialog`, the dialog will close. (open the dialog up again after you try it.)</li>
+        <li>Activate the "close the dialog" button. Where does focus go?</li>
+
+      </ol>
+  <p>If these two buttons weren't included, how could the user close the dialog?</p>
+  </form>
+</dialog>
+
+<button id="modalless">Open modalless dialog</button>
+<p id="text"></p>
+<hr/>
+<h2>Random interactive elements</h2>
+<p>Before opening the dialog, tab thru these interactive elements. Then try again when the dialog is open.</p>
+<p>When the dialog is open, because the dialog was opened with <code>show()</code> it is non-modal. Are these normally interactive elements interactive? They should be.</p>
+<p><a href="https://machinelearningworkshop.com">Machine Learning Workshop</a></p>
+  <p><label>Here is a useless input: <input></label></p>
+      <p>
+       <label>Here is a useless select:
+           <select name="yummy">
+          <option>Maple Syrup</option>
+          <option>Ice Cream</option>
+          <option>Bacon</option>
+           </select>
+       </label>
+    </p>
+<button id="closeIt">close the dialog</button>
+<dialog open>
+    <form method="dialog">
+      <button type="submit" autofocus>close</button>
+    </form>
+  </dialog>
+    
+</body>
+</html>
